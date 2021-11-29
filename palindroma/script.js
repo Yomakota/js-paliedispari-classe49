@@ -6,24 +6,47 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 // (Senza funzione)
 
-let word = prompt('insert your word');
-let reverseWord = '';
+// let word = prompt('insert your word');
+// let reverseWord = '';
 
-for (let i = word.length - 1; i >= 0; i--) {
+// for (let i = word.length - 1; i >= 0; i--) {
 
-  reverseWord += word[i]; 
-}
+//   reverseWord += word[i]; 
+// }
 
-if (word == reverseWord) {
+// if (word == reverseWord) {
 
-  console.log('this is a palindrome');
-} 
+//   console.log('this is a palindrome');
+// } 
 
-else { 
+// else { 
 
-  console.log('this in not palindrome');
-} 
+//   console.log('this in not palindrome');
+// } 
 
 
 
 // Creare una funzione per capire se la parola inserita è palindroma
+
+let word = prompt('insert your word');
+let reverseWord = '';
+
+function palindrome(word) {
+
+    let reverseWord = '';
+
+    for (let i = word.length - 1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
+
+    return reverseWord;
+}
+
+if (word == palindrome(word)) {
+
+    console.log('this is a palindrome');
+
+} else {
+
+    console.log('this in not palindrome');
+}
