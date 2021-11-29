@@ -13,37 +13,68 @@ In un secondo momento creiamo delle funzioni per i numeri random e per il check 
 // Generiamo un numero random(sempre da 1 a 5) per il computer.
 // Sommiamo i due numeri
 
-let evenOrOdd = prompt ('choose even or odd');
-
-let number = parseInt(prompt ('insert your number from 1 to 5'));
-console.log(number);
-
-let numberCpu = parseInt((Math.floor(Math.random() * 5) + 1));
-console.log('number Cpu: ', numberCpu);
-
-let sum = '';
-sum = number + numberCpu;
+// let evenOrOdd = prompt ('choose even or odd');
+// let number = parseInt(prompt ('insert your number from 1 to 5'));
+// console.log(number);
+// let numberCpu = parseInt((Math.floor(Math.random() * 5) + 1));
+// console.log('number Cpu: ', numberCpu);
+// let sum = '';
+// sum = number + numberCpu;
 
 // Stabiliamo se la somma dei due numeri è pari o dispari
 // Dichiariamo chi ha vinto
 // (corrispondenza tra scelta pari e dispari e somma pari o dispari)
 
-if (sum % 2 == 0) {
+// if (sum % 2 == 0) {
+//   console.log('sum is even');
+// } else {
+//   console.log('sum is odd');
+// }
 
-  console.log('sum is even');
 
-} else {
+// if (sum % 2 == 0 && evenOrOdd == "even" || sum % 2 != 0 && evenOrOdd == "odd") {
+//     document.getElementById("winner").innerHTML = "User won";
+// } else {
+//     document.getElementById("winner").innerHTML = "Cpu won";
+// }
 
-  console.log('sum is odd');
+
+// con funzioni
+
+let evenOrOdd = prompt ('choose even or odd');
+let numberUser = parseInt(prompt ('insert your number from 1 to 5'));
+console.log(numberUser);
+let numberCpu = parseInt((Math.floor(Math.random() * 5) + 1));
+console.log('number Cpu: ', numberCpu);
+let sum = '';
+sum = numberUser + numberCpu;
+
+//creiamo delle funzioni per i numeri random e per il check pari dispari
+
+function numbers(min, max) {
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+console.log('sum is: ' + sum);
 
-if (sum % 2 == 0 && evenOrOdd == "even" || sum % 2 != 0 && evenOrOdd == "odd") {
+function isEven(num) {
+
+    if (num % 2 == 0) {
+        console.log('sum is even');
+        return true;
+    } 
     
+    else {
+        console.log('sum is odd');
+        return false;
+    }
+}
+
+if (isEven(sum) == true && evenOrOdd == "even" || isEven(sum) == false && evenOrOdd == "odd") {
+
     document.getElementById("winner").innerHTML = "User won";
-
-} else {
-
+} 
+else {
     document.getElementById("winner").innerHTML = "Cpu won";
- 
 }
