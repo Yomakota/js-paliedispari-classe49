@@ -39,13 +39,16 @@ In un secondo momento creiamo delle funzioni per i numeri random e per il check 
 // }
 
 
-// con funzioni
+// metodo con funzioni
 
 let evenOrOdd = prompt ('choose even or odd');
+
 let numberUser = parseInt(prompt ('insert your number from 1 to 5'));
 console.log(numberUser);
+
 let numberCpu = parseInt((Math.floor(Math.random() * 5) + 1));
 console.log('number Cpu: ', numberCpu);
+
 let sum = '';
 sum = numberUser + numberCpu;
 
@@ -62,11 +65,13 @@ function isEven(num) {
 
     if (num % 2 == 0) {
         console.log('sum is even');
+
         return true;
     } 
     
     else {
         console.log('sum is odd');
+        
         return false;
     }
 }
